@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Course Recycler View Cell/Row | FIXME: - Create Style in style.xml to use with android:textAppearance | Play with negative margins-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:background="@color/background"
+    android:alpha=".80">
+
+
+    <!--Subject (CS) & Course Number (121) | FIXME: - Spannable String Subject in gold, Course Number in white-->
+
+    <TextView
+        android:id="@+id/subject_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/brandon_bld"
+        android:textSize="24sp"
+        android:textColor="@color/pace_gold"
+        android:text="@string/course_label_hint"/>
+
+    <!--Save Button | FIXME: - CREATE CUSTOM SAVE BUTTON VIA EXTENDING TEXTVIEW CLASS -->
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/subject_course"
+        android:text="☆"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <!-- Course Title -->
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/subject_course"
+        android:text="@string/course_title"
+        android:fontFamily="@font/brandon_med"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <!--Custom Week View | FIXME: - Create a Custom View (Maybe Extend Spannable Text or TextView?) -->
+
+    <TextView
+        android:id="@+id/week_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/subject_course"
+        android:text="M T W Th F S Su"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:alpha=".25"
+        />
+
+    <!--Credits-->
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/course_title"
+        android:text="@string/_4_credits"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <!--Seats Left-->
+
+    <TextView
+        android:id="@+id/seats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/credits"
+        android:text="@string/seats_left"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <!--Instructor-->
+
+    <TextView
+        android:id="@+id/instructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/seats"
+        android:text="@string/instrcutor"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <!--Time-->
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/week_view"
+        android:text="@string/time"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <!--Course Register Number-->
+
+    <TextView
+        android:id="@+id/crn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/time"
+        android:text="@string/crn"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <!--Campus-->
+
+    <TextView
+        android:id="@+id/campus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/crn"
+        android:text="@string/campus"
+        android:fontFamily="@font/brandon_light"
+        android:textSize="12sp"
+        android:textColor="@color/pace_gold"
+        />
+
+</RelativeLayout>

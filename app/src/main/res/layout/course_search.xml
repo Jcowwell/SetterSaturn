@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!--Required Label-->
+
+    <TextView
+        android:id="@+id/required_search_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/required"
+        android:fontFamily="@font/brandon_bld"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+
+    <!--Term-->
+
+    <LinearLayout
+        android:id="@+id/term_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/required_search_label">
+
+        <TextView
+            android:id="@+id/term_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="@string/term_label"
+            android:fontFamily="@font/brandon_bld"
+            android:textSize="24sp"
+            android:textColor="@color/pace_gold"/>
+
+        <Spinner
+            android:id="@+id/term_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="textEnd"
+            android:background="@color/colorPrimary">
+        </Spinner>
+    </LinearLayout>
+
+    <!--Course Level-->
+
+    <LinearLayout
+        android:id="@+id/course_level_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/term_container">
+
+        <TextView
+            android:id="@+id/course_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="@string/course_level_label"
+            android:fontFamily="@font/brandon_bld"
+            android:textSize="24sp"
+            android:textColor="@color/pace_gold"/>
+
+        <Spinner
+            android:id="@+id/course_level_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="textEnd"
+            android:background="@color/colorPrimary">
+        </Spinner>
+    </LinearLayout>
+
+    <!--Subject-->
+
+    <LinearLayout
+        android:id="@+id/subject_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/course_level_container">
+
+        <TextView
+            android:id="@+id/subject_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="@string/subject_label"
+            android:fontFamily="@font/brandon_bld"
+            android:textSize="24sp"
+            android:textColor="@color/pace_gold"/>
+
+        <Spinner
+            android:id="@+id/subject_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="textEnd"
+            android:background="@color/colorPrimary">
+        </Spinner>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/optional_search_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subject_container"
+        android:layout_marginTop="16dp"
+        android:text="@string/optional"
+        android:fontFamily="@font/brandon_bld"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+
+    <!--Course Number-->
+
+    <LinearLayout
+        android:id="@+id/course_number_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/optional_search_label">
+
+        <TextView
+            android:id="@+id/course_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="@string/course_label"
+            android:fontFamily="@font/brandon_bld"
+            android:textSize="24sp"
+            android:textColor="@color/pace_gold"/>
+
+        <Spinner
+            android:id="@+id/course_number_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="textEnd"
+            android:background="@color/colorPrimary">
+        </Spinner>
+    </LinearLayout>
+
+    <!--Campus-->
+
+    <LinearLayout
+        android:id="@+id/campus_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/course_number_container">
+
+        <TextView
+            android:id="@+id/campus_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="@string/campus_label"
+            android:fontFamily="@font/brandon_bld"
+            android:textSize="24sp"
+            android:textColor="@color/pace_gold"/>
+
+        <Spinner
+            android:id="@+id/campus_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="textEnd"
+            android:background="@color/colorPrimary">
+        </Spinner>
+    </LinearLayout>
+
+</RelativeLayout>

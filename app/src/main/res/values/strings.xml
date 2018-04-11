@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SetterSaturn</string>
+    <string name="tracked_courses_will_show_up_here">Tracked Courses Will Show up Here</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="term_label">Term</string>
+    <string name="course_level_label">Course Level</string>
+    <string name="subject_label">Subject</string>
+    <string name="course_label">Course</string>
+    <string name="required">Required</string>
+    <string name="optional">Optional</string>
+    <string name="campus_label">Campus</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="course_label_hint">CS121</string>
+    <string name="course_title">Computing Programming I</string>
+    <string name="_4_credits">4 Credits</string>
+    <string name="seats_left">13 of 24 seats left</string>
+    <string name="instrcutor">TBA</string>
+    <string name="time">12:15PM - 2:15PM</string>
+    <string name="crn">CRN: 72535</string>
+    <string name="campus">NYC Campus</string>
+</resources>
