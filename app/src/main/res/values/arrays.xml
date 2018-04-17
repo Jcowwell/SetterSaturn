@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="terms">
+        <item>January Intersession 2018</item>
+        <item>Spring 2018</item>
+        <item>All Summer (2018)</item>
+        <item>Early Summer 1 (2018)</item>
+        <item>Summer 1 (2018)</item>
+        <item>Summer 2 (2018)</item>
+        <item>Late Summer 2 (2018)</item>
+        <item>Fall 2018</item>
+    </string-array>
+
+    <string-array name="course_levels">
+        <item>Undergraduate</item>
+        <item>Graduate</item>
+        <item>Doctoral</item>
+        <item>Non-Traditional</item>
+        <item>Law-JD</item>
+    </string-array>
+
+    <string-array name="subjects">
+        <item>All</item>
+        <item> Accounting</item>
+        <item>American Studies</item>
+        <item>Anthropology</item>
+        <item>Arabic</item>
+        <item>Art</item>
+        <item>BFA Acting</item>
+        <item>Biology</item>
+        <item>Business</item>
+        <item>Chemistry</item>
+        <item>Chinese</item>
+        <item>College of Health Professions</item>
+        <item>Commercial Dance</item>
+        <item>Communication Sciences &amp; Disorders</item>
+        <item>Communication Studies</item>
+        <item>Communications</item>
+        <item>Computer Information Systems</item>
+        <item>Computer Information Technology</item>
+        <item>Computer Science</item>
+        <item>Criminal Justice</item>
+        <item>Digital Media Studies</item>
+        <item>Dyson General</item>
+        <item>Economics</item>
+        <item>Educational Studies</item>
+        <item>English</item>
+        <item>Environmental Studies</item>
+        <item>Film And Screen Studies</item>
+        <item>Finance</item>
+        <item>Forensic Science</item>
+        <item>French</item>
+        <item>Global Asia</item>
+        <item>Health Science</item>
+        <item>Health and Wellness</item>
+        <item>History</item>
+        <item>Honors Program</item>
+        <item>Interdisciplinary</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Journalism</item>
+        <item>Latin</item>
+        <item>Latin American Studies</item>
+        <item>Latina/Latino Studies</item>
+        <item>Law</item>
+        <item>Literature</item>
+        <item>Management</item>
+        <item>Marketing</item>
+        <item>Mathematics</item>
+        <item>Media and Communication Arts</item>
+        <item>Music</item>
+        <item>Musical Theater</item>
+        <item>Nursing (NUR)</item>
+        <item>Nursing (NURS)</item>
+        <item>PA Performance Ensemble</item>
+        <item>Peace and Justice Studies</item>
+        <item>Performing Arts Film and TV</item>
+        <item>Performing Arts General Edu</item>
+        <item>Performing Arts Prod/Design</item>
+        <item>Performing Arts Stage Mgt</item>
+        <item>Philosophy</item>
+        <item>Physics</item>
+        <item>Political Science</item>
+        <item>Psychology</item>
+        <item>Religious Studies</item>
+        <item>Russian</item>
+        <item>Science</item>
+        <item>Sociology</item>
+        <item>Spanish</item>
+        <item>Speech</item>
+        <item>Taxation</item>
+        <item>Teaching</item>
+        <item>Technology Systems</item>
+        <item>Translation</item>
+        <item>University Life</item>
+        <item>Women's &amp; Gender Studies</item>
+    </string-array>
+
+    <string-array name="campuses">
+        <item>New York City</item>
+        <item>Pleasantville</item>
+        <item>White Plains</item>
+        <item>Midtown Center</item>
+        <item>Off Campus</item>
+        <item>Online</item>
+    </string-array>
+
+    <string-array name="attributes">
+        <item>Anyls Hum, Social &amp; Ntrl Pheon</item>
+        <item>Area Of Knowledge I</item>
+        <item>Area Of Knowledge II</item>
+        <item>Area Of Knowledge III</item>
+        <item>Area Of Knowledge IV</item>
+        <item>Area Of Knowledge V</item>
+        <item>Business Core</item>
+        <item>Capstone</item>
+        <item>Challenge to Achieve at Pace</item>
+        <item>Civic Engagement &amp; Public Values</item>
+        <item>Contemporary Global Studies</item>
+        <item>Education Technology Prfssnls</item>
+        <item>Enhancement Course</item>
+        <item>Experiential Learning</item>
+        <item>Exploratory Course</item>
+        <item>Foundation Course</item>
+        <item>Honors</item>
+        <item>Humanistic &amp; Creative Expression</item><item>Humanities</item>
+        <item>Inquiry and Exploration</item>
+        <item>Integrative Core</item>
+        <item>Learning Community</item>
+        <item>Remedial Course</item>
+        <item>Service Learning</item>
+        <item>Summer Discount</item>
+        <item>Teach For America</item>
+        <item>Teaching Fellows</item>
+        <item>Travel Course</item>
+        <item>Video Conference</item>
+        <item>Western Heritage</item>
+        <item>World Traditions &amp; Cultures</item>
+        <item>Writing-Enhanced</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="times">
+        <item>Day</item>
+        <item>Evening</item>
+        <item>Earlybird</item>
+        <item>Weekend</item>
+
+    </string-array>
+
+    <string-array name="errors">
+        <item>No Fields Available</item>
+    </string-array>
+
+</resources>

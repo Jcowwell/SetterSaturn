@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00193F">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subject_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_title_style"
+            android:layout_marginTop="8dp"
+            android:text="@string/course_label_hint"/>
+
+        <!--Save Button | TODO: - CREATE CUSTOM SAVE BUTTON VIA EXTENDING TEXTVIEW CLASS -->
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/subject_course"
+            android:layout_alignBaseline="@id/subject_course"
+            android:text="☆"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <!--Course Register Number-->
+
+        <TextView
+            android:id="@+id/crn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_end_text_style"
+            android:textSize="12sp"
+            android:layout_alignTop="@id/subject_course"
+            android:text="@string/crn"
+            />
+
+        <!-- Course Title -->
+
+        <TextView
+            android:id="@+id/course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_subtitle_style"
+            android:layout_below="@id/subject_course"
+            android:text="@string/course_title" />
+
+        <!--Custom Week View | TODO: - Create a Custom View (Maybe Extend Spannable Text or TextView?) -->
+
+        <TextView
+            android:id="@+id/week_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_start_text_style"
+            android:layout_below="@id/course_title"
+            android:text="M T W Th F S Su"
+            android:alpha=".25" />
+
+        <!--Credits-->
+
+        <TextView
+            android:id="@+id/credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_start_text_style"
+            android:layout_below="@id/week_view"
+            android:text="@string/_4_credits" />
+
+        <!--Instructor-->
+
+        <TextView
+            android:id="@+id/instructor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_start_text_style"
+            android:layout_below="@id/credits"
+            android:text="@string/instructor" />
+
+        <!--Time-->
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_end_text_style"
+            android:layout_below="@id/course_title"
+            android:text="@string/time"/>
+
+        <!--Seats Left-->
+
+        <TextView
+            android:id="@+id/seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_end_text_style"
+            android:layout_below="@id/time"
+            android:text="@string/seats_left"/>
+
+        <!--Campus-->
+
+        <TextView
+            android:id="@+id/campus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listing_end_text_style"
+            android:layout_below="@id/seats"
+            android:text="@string/campus" />
+
+        <!--Body: Course Description, Corequistes, Prerequisites, Course Rotation, Required Materials, Schedule Type, Attributes, Fees, Room Assignment, Date, School, Section Comments -->
+
+        <!--TODO: Swap out for FrameLayout-->
+
+        <LinearLayout
+            android:id="@+id/body_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/instructor"
+            android:orientation="vertical">
+
+            <!--Course Description-->
+
+            <TextView
+                android:id="@+id/course_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/course_description_example"/>
+
+            <!--Corequistes-->
+
+            <TextView
+                android:id="@+id/corequistes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/corequistes_example"/>
+
+            <!--Prerequisites-->
+
+            <TextView
+                android:id="@+id/prerequisites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/prerequisites_example"/>
+
+            <!--Course Rotation-->
+
+            <TextView
+                android:id="@+id/course_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/course_rotation_example"/>
+
+            <!--Required Materials-->
+
+            <TextView
+                android:id="@+id/required_materials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/required_materials_example"/>
+
+            <!--Schedule Type-->
+
+            <TextView
+                android:id="@+id/schedule_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/schedule_type_example"/>
+
+            <!--Attributes-->
+
+            <TextView
+                android:id="@+id/attributes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/attributes_example"/>
+
+            <!--Fees-->
+
+            <TextView
+                android:id="@+id/fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/fees_example"/>
+
+            <!--Room Assignment-->
+
+            <TextView
+                android:id="@+id/room_assignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/room_assignment_example"/>
+
+            <!--Date-->
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/date_example"/>
+
+            <!--School-->
+
+            <TextView
+                android:id="@+id/school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/school_example"/>
+
+            <!--Section Comments-->
+
+            <TextView
+                android:id="@+id/section_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sub_body_text_style"
+                android:text="@string/section_comment_example"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

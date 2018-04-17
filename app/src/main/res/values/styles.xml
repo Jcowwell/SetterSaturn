@@ -8,4 +8,140 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--Font for Styles-->
+
+    <!--Font & Font Color for Title-->
+
+    <style name="title_font">
+        <item name="android:fontFamily">@font/brandon_bld</item>
+        <item name="android:textColor">@color/pace_gold</item>
+    </style>
+
+    <!--Font & Font Color for Subtitle-->
+
+    <style name="subtitle_font" parent="title_font">
+        <item name="fontFamily">@font/brandon_med</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Font & Font Color for Body-->
+
+    <style name="body_font" parent="subtitle_font">
+        <item name="android:fontFamily">@font/brandon_reg</item>
+    </style>
+
+    <!--Font & Font Color for Sub-Body Title-->
+
+    <style name="sub_body_title_font" parent="body_font">
+        <item name="android:fontFamily">@font/brandon_light</item>
+        <item name="android:textColor">@color/pace_gold</item>
+    </style>
+
+    <!--Font & Font Color for Title-->
+
+    <style name="sub_body_font" parent="body_font">
+        <item name="android:fontFamily">@font/brandon_light</item>
+    </style>
+
+
+    <!--For course_listing.xml-->
+
+    <!--Styles for Text: size, font, color, and placement.-->
+
+    <!--Title Text Style Variant-->
+
+    <style name="title_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAppearance">@style/title_font</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <!--Sub - Title Text Style Variant-->
+
+    <style name="subtitle_style" parent="title_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAppearance">@style/subtitle_font</item>
+        <item name="android:layout_marginTop">-20dp</item>
+    </style>
+
+    <!--Normal Left|Start Text Style Variant-->
+
+    <style name="start_text_style" parent="title_style">
+        <item name="android:textSize"> 12sp</item>
+        <item name="android:textAppearance">@style/body_font</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <!--Normal Right|End Text Style Variant-->
+
+    <style name="end_text_style">
+        <item name="android:textSize"> 12sp</item>
+        <item name="android:textAppearance">@style/body_font</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <!--Listing Title Text Style Variant-->
+
+    <style name="listing_title_style" parent="title_style">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <!--Listing Subtitle Text Style Variant-->
+
+    <style name="listing_subtitle_style" parent="subtitle_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <!--Normal Left|Start Text Style Variant-->
+
+    <style name="listing_start_text_style" parent="start_text_style">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--Normal Right|End Text Style Variant-->
+
+    <style name="listing_end_text_style" parent="end_text_style">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--Sub-Body Text Style Variant-->
+
+    <style name="sub_body_text_style" parent="listing_start_text_style">
+        <item name="android:textAppearance">@style/sub_body_font</item>
+        <item name="layout_alignParentStart">false</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+
+    </style>
+
+    <!--For course_search.xml-->
+
+    <style name="search_title_style" parent="subtitle_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_alignParentStart">false</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="search_label_text_style" parent="title_style">
+        <item name="android:textAppearance">@style/body_font</item>
+        <item name="android:textColor">@color/pace_gold</item>
+        <item name="android:layout_marginStart">18dp</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:layout_marginEnd">18dp</item>
+        <item name="android:layout_marginStart">18dp</item>
+    </style>
+
 </resources>

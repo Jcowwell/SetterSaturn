@@ -5,7 +5,7 @@
     <string name="term_label">Term</string>
     <string name="course_level_label">Course Level</string>
     <string name="subject_label">Subject</string>
-    <string name="course_label">Course</string>
+    <string name="course_number_label">Course Number</string>
     <string name="required">Required</string>
     <string name="optional">Optional</string>
     <string name="campus_label">Campus</string>
@@ -14,8 +14,27 @@
     <string name="course_title">Computing Programming I</string>
     <string name="_4_credits">4 Credits</string>
     <string name="seats_left">13 of 24 seats left</string>
-    <string name="instrcutor">TBA</string>
+    <string name="instructor">TBA</string>
     <string name="time">12:15PM - 2:15PM</string>
     <string name="crn">CRN: 72535</string>
     <string name="campus">NYC Campus</string>
+    <string name="course_description_example">Cource Description: Introduction to Java programming and computer science concepts. Java environment setting up. Variables, basic built-in data types and arrays. Expressions. Assignment, conditional and iterative statements. Computation abstraction and reuse with methods and objects. Parameter passing. String processing. Exception handling. Text file I/O. Problem-solving through course projects.</string>
+    <string name="corequistes_example">Corequistes: None</string>
+    <string name="prerequisites_example">Prerequisites:  ( Course : CISA 101 . Minimum Grade of D. )or (Course : CISA 101C .  Minimum Grade of D. ) or  (Course : CISB 101 .  Minimum Grade of D. ) or …</string>
+    <string name="course_rotation_example">Course Rotation: Fall and Spring</string>
+    <string name="required_materials_example">Required Material: To be Determined</string>
+    <string name="schedule_type_example">Schedule Type: Lecture</string>
+    <string name="attributes_example">Attributes: Foundation Course</string>
+    <string name="fees_example">Fees: $0</string>
+    <string name="room_assignment_example">Room Assignment: \t1 Pace Plaza CIVIC W200A</string>
+    <string name="date_example">Date: 09/05/2018 – 12/21/2018</string>
+    <string name="school_example">School: Seidenburg School of CSIS</string>
+    <string name="section_comment_example">Section Comments: None</string>
+    <string name="instructor_label">Instructor</string>
+    <string name="attributes_label">Attributes</string>
+    <string name="day_label">Day</string>
+    <string name="time_label">Time</string>
+
+
+
 </resources>
