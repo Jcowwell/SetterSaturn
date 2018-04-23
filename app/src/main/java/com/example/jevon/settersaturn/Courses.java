@@ -26,6 +26,8 @@ public class Courses {
     private String courseMaterials;
     private String fees;
     private String sectionComments;
+    //https://appsrv.pace.edu/ScheduleExplorerlive/section.cfm?crn=72285&term=201870 Example
+    private String courseURL;
     private ScheduleType scheduleType;
     private School school;
     private int seatAvailability;
