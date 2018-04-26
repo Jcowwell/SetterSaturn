@@ -1,16 +1,20 @@
 package com.example.jevon.settersaturn;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Spinner;
 
 import com.example.jevon.settersaturn.CourseSearchTask.MyAsyncTaskCallback;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -33,6 +37,8 @@ public class CourseSearchActivity extends AppCompatActivity implements MyAsyncTa
     Spinner attributeSpinner;
     Spinner daySpinner;
     Spinner timeSpinner;
+
+    int spinnerLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -109,17 +115,61 @@ public class CourseSearchActivity extends AppCompatActivity implements MyAsyncTa
 
     @Override
     public void onAsyncTaskComplete(HashMap<String, Elements> elementsHashMap) {
-        int spinnerLayout = R.layout.spinner_item;
+        spinnerLayout = R.layout.spinner_item;
 
-        termSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.term_label))));
-        courseLevelSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.course_level_label))));
-        subjectSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.subject_label))));
-        courseNumberSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.course_number_label))));
-        campusSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.campus_label))));
-        instructorSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.instructor_label))));
-        attributeSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.attributes_label))));
-        daySpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.day_label))));
-        timeSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, getArrayData(String.valueOf(R.string.time_label))));
+        termSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("terms")));
+        courseLevelSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("levels")));
+        subjectSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("subjects")));
+        courseNumberSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("courseNumbers")));
+        campusSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("locations")));
+        instructorSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("instructors")));
+        attributeSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("attributes")));
+        daySpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("days")));
+        timeSpinner.setAdapter(new CourseSpinnerArrayAdapter(this, spinnerLayout, elementsHashMap.get("times")));
 
     }
+
+    private void setDynamicData() {
+
+        subjectSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                class CourseNumberTask extends AsyncTask<String, Void, Elements> {
+
+                    @Override
+                    protected Elements doInBackground(String... strings) {
+
+                        final String SCHEDULE_EXPLORER_URL = "https://appsrv.pace.edu/ScheduleExplorerLive/";
+
+                        try {
+                            Document doc = Jsoup.connect(SCHEDULE_EXPLORER_URL)
+                                    .data("subject", subjectSpinner.getSelectedItem().toString())
+                                    .get();
+
+
+                           return new HashMap<String, Elements>().put("courseNumber", doc.select("select[name=coursenumber]"));
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+                        return null;
+                    }
+
+                    @Override
+                    protected void onPostExecute(Elements elements) {
+                        super.onPostExecute(elements);
+                        courseNumberSpinner.setAdapter(new CourseSpinnerArrayAdapter(getApplicationContext(), spinnerLayout, elements));
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
 }

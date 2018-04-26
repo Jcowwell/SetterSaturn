@@ -63,11 +63,11 @@ public class CourseSearchTask extends AsyncTask<HashMap<String, Elements>, Void,
 
             Elements terms = doc.select("select[name=term] > optgroup[label=-----------------------------------------------------------]");
 
-            elementsHashMap.put("terms", terms);
-
             Elements summerTerms = doc.select("select[name=term] > optgroup[label=-----------Summer Courses---------------------]");
 
-            elementsHashMap.put("summerTerms", summerTerms);
+            terms.addAll(summerTerms);
+
+            elementsHashMap.put("terms", terms);
 
             Elements courseLevels = doc.select("select[name=level]");
 
@@ -93,6 +93,7 @@ public class CourseSearchTask extends AsyncTask<HashMap<String, Elements>, Void,
             elementsHashMap.put("instructors", instructors);
 
             Elements locations = doc.select("select[name=location]");
+
 
             elementsHashMap.put("locations", locations);
 
